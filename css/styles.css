@@ -62,7 +62,6 @@ img {
 	padding-left: 15px;
 	padding-right: 15px;
 	margin: 0 auto;
-	outline: 1px solid red;
 }
 /* Стилизация шапки сайта */
 .header {
@@ -141,6 +140,17 @@ img {
 .header-tel:focus {
 	color: var(--accent-color);
 }
+.header-mail-logo,
+.header-tel-logo {
+	fill: var(--text-color);
+	margin-right: 10px;
+}
+.header-mail:hover .header-mail-logo,
+.header-mail:focus .header-mail-logo,
+.header-tel:hover .header-tel-logo,
+.header-tel:focus .header-tel-logo {
+	fill: var(--accent-color);
+}
 /* Стилизация героя */
 .hero {
 	max-width: 1600px;
@@ -205,7 +215,6 @@ img {
 	height: 120px;
 	display: block;
 	background-color: #f5f4fa;
-
 	background-size: auto;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -325,9 +334,22 @@ img {
 .team-item-social-link {
 	width: 44px;
 	height: 44px;
-	background-color: #000000;
+	background-color: #ffffff;
 	border-radius: 50%;
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.team-item-social-logo {
+	fill: #afb1b8;
+}
+.team-item-social-link:hover,
+.team-item-social-link:focus {
+	background-color: #2196f3;
+}
+.team-item-social-link:hover .team-item-social-logo,
+.team-item-social-link:focus .team-item-social-logo {
+	fill: #ffffff;
 }
 /* Стилизация клиентов */
 .clients {
@@ -355,6 +377,20 @@ img {
 	height: 92px;
 	border: 1px solid #afb1b8;
 	border-radius: 4px;
+	text-align: center;
+	padding: 16px;
+}
+
+.clients-item-logo {
+	fill: #afb1b8;
+}
+.clients-item:hover,
+.clients-item:focus {
+	border: 1px solid #2196f3;
+}
+.clients-item:hover .clients-item-logo,
+.clients-item:focus .clients-item-logo {
+	fill: #2196f3;
 }
 
 /* Стилизация подвала */
@@ -409,14 +445,8 @@ img {
 	font-size: 14px;
 	line-height: 1.14;
 	margin-bottom: 20px;
-
-	/* text-align: center; */
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
-	/* margin-bottom: 30px;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 696px; */
 }
 .footer-social-list {
 	display: flex;
@@ -428,10 +458,21 @@ img {
 .footer-social-link {
 	width: 44px;
 	height: 44px;
-	background-color: #ffffff;
+	background-color: rgba(255, 255, 255, 0.1);
 	border-radius: 50%;
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
+.footer-social-logo {
+	fill: #ffffff;
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+	background-color: #2196f3;
+}
+
 /* Стилизация страницы Портфолио */
 .nav-portfolio {
 	padding-top: 94px;
@@ -467,6 +508,7 @@ img {
 .nav-portfolio-btn:focus {
 	color: var(--light-color-for-another);
 	background-color: var(--btn-background-color);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Стилизация работ портфолио */
@@ -502,4 +544,8 @@ img {
 	line-height: 1.88;
 	letter-spacing: 0.03em;
 	margin-top: 4px;
+}
+.nav-examples-item:hover,
+.nav-examples-item:focus {
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
